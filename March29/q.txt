@@ -1,0 +1,12 @@
+Write a java program to create a class SortArray with suitable data member functions to do the following operations:
+
+a. to allocate memory for the array of the n size which to be sorted
+b. to input n numbers into the attau
+c. to show the values stored in the array
+
+to arrange them in ascending order using 
+d. bubble sort
+e. selection sort
+f. insertion sort
+g. merge sort
+h. quick sort

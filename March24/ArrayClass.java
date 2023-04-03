@@ -92,7 +92,6 @@ public class ArrayClass {
         }
     }
 
-
     // find Maximum Elements in array
     public int findMax() {
         int max = arr[0];
@@ -104,8 +103,10 @@ public class ArrayClass {
         return max;
     }
 
-    // Make all the elements of array three-digits after applying provided conditions
+    // Make all the elements of array three-digits after applying provided
+    // conditions
     public void makeThreeDigitsNumbers() {
+        int[] newArray = new int[size - 2];
         for (int i = 0; i < size - 2; i = i + 3) {
             int num1 = singleDigit(arr[i]);
             int num2 = singleDigit(arr[i + 1]);
@@ -138,16 +139,16 @@ public class ArrayClass {
         arr.inputElements();
         System.out.println();
         arr.displayElements();
-        int sum = arr.calculateSum();
-        System.out.println("\nSum of elements: " + sum);
-        double average = arr.calculateAverage();
-        System.out.println("\nAverage of elements: " + average);
-//        arr.swapMaxMin();
-//        System.out.println("\nAfter Swap:");
-//        arr.displayElements();
-        System.out.println();
-        arr.findOccurrences();
+        // int sum = arr.calculateSum();
+        // System.out.println("\nSum of elements: " + sum);
+        // double average = arr.calculateAverage();
+        // System.out.println("\nAverage of elements: " + average);
+        // System.out.println();
+        // arr.findOccurrences();
         arr.makeThreeDigitsNumbers();
-        System.out.println("\nGreatest number: " + arr.findMax());
+        // System.out.println("\nGreatest number: " + arr.findMax());
+        // arr.swapMaxMin();
+        // System.out.println("\nAfter Swap:");
+        arr.displayElements();
     }
 }

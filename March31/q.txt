@@ -1,0 +1,20 @@
+Write a program in java to create two classes such as TwoDArray and OneDArray.
+
+Members of TwoDArray class are:
+
+a) One 2D array
+b) Constructor to allocate memory of size (2 x n) for the array
+c) input data into the array
+d) display the array elements row wise
+e) Split the array into two different arrays and store them in the array variable in two different objects of class OneDArray.
+f) Add the arrays (m x n matrices) of two objects of TwoDArray class
+g) Multiply the arrays (m x n matrices) of two objects of TwoDArray class
+
+Members of OneDArray class are:
+
+a) One 1D Array
+b) Constructor to allocate memory of size (n) as the column size of TwoDArray class
+c) Show the array
+
+
+Modify the above program to create same (m) no of array of objects of OneDArray as the no of rows available in the array (m x n) of TwoDArray. Then add another method in TwoDArray class that can distribute all rows of the 2D array of TwoDArray class into each object of OneDArray class.
