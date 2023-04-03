@@ -19,6 +19,7 @@ public class ArrayClass {
         for (int i = 0; i < size; i++) {
             arr[i] = sc.nextInt();
         }
+        sc.close();
     }
 
     // Method to display the array elements
@@ -106,13 +107,34 @@ public class ArrayClass {
     // Make all the elements of array three-digits after applying provided
     // conditions
     public void makeThreeDigitsNumbers() {
-        int[] newArray = new int[size - 2];
-        for (int i = 0; i < size - 2; i = i + 3) {
+        int k = 0;
+        int num2 = 0, num3 = 0;
+
+        // Calculate the size of the new array
+        int newSize = size / 3 + (size % 3 == 0 ? 0 : 1);
+
+        // Create a new array to store three-digit numbers
+        int[] newArray = new int[newSize];
+
+        for (int i = 0; i < size; i = i + 3) {
             int num1 = singleDigit(arr[i]);
-            int num2 = singleDigit(arr[i + 1]);
-            int num3 = singleDigit(arr[i + 2]);
+            if (k == (size / 2) - 1) {
+                num2 = 0;
+                num3 = 0;
+            }
+            if (i < size - 1) {
+                num2 = singleDigit(arr[i + 1]);
+                num3 = singleDigit(arr[i + 2]);
+            }
             int number = num1 * 100 + num2 * 10 + num3;
-            arr[i] = number;
+            newArray[k] = number;
+            k++;
+        }
+
+        for (int i = 0; i < newArray.length; i++) {
+            if (newArray[i] >= 100 && newArray[i] <= 999) {
+                System.out.print(newArray[i] + " ");
+            }
         }
     }
 
@@ -145,10 +167,12 @@ public class ArrayClass {
         // System.out.println("\nAverage of elements: " + average);
         // System.out.println();
         // arr.findOccurrences();
+        System.out.println();
         arr.makeThreeDigitsNumbers();
         // System.out.println("\nGreatest number: " + arr.findMax());
         // arr.swapMaxMin();
         // System.out.println("\nAfter Swap:");
-        arr.displayElements();
+        // arr.displayElements();
+        sc.close();
     }
 }
