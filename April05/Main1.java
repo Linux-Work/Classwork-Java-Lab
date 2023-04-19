@@ -1,6 +1,6 @@
 import java.util.*;
 
-class KIITEmployee implements Comparable<KIITEmployee> {
+class KIITEmployee {
     private int emp_id;
     private String emp_name;
     private String emp_desig;
@@ -8,42 +8,37 @@ class KIITEmployee implements Comparable<KIITEmployee> {
     private double hra;
     private double da;
 
-    public KIITEmployee(int id, String name, String desig, double salary) {
-        emp_id = id;
-        emp_name = name;
-        emp_desig = desig;
-        basicSalary = salary;
-        hra = 0.15 * basicSalary; // 15% of basicSalary
-        da = 0.38 * basicSalary; // 38% of basicSalary
+    public KIITEmployee(int emp_id, String emp_name, String emp_desig, double basicSalary) {
+        this.emp_id = emp_id;
+        this.emp_name = emp_name;
+        this.emp_desig = emp_desig;
+        this.basicSalary = basicSalary;
+        this.hra = 0.15 * basicSalary; // 15% of basicSalary
+        this.da = 0.38 * basicSalary; // 38% of basicSalary
     }
 
     public void getEmployeeDetails() {
-        System.out.println("Employee ID: " + emp_id);
-        System.out.println("Employee Name: " + emp_name);
-        System.out.println("Employee Designation: " + emp_desig);
-        System.out.println("Basic Salary: " + basicSalary);
-        System.out.println("HRA: " + hra);
-        System.out.println("DA: " + da);
+        System.out.println("Employee ID: " + this.emp_id);
+        System.out.println("Employee Name: " + this.emp_name);
+        System.out.println("Employee Designation: " + this.emp_desig);
+        System.out.println("Basic Salary: " + this.basicSalary);
+        System.out.println("HRA: " + this.hra);
+        System.out.println("DA: " + this.da);
     }
 
     public double getGrossSalary() {
-        return basicSalary + hra + da;
-    }
-
-    @Override
-    public int compareTo(KIITEmployee other) {
-        return Double.compare(this.getGrossSalary(), other.getGrossSalary());
+        return this.basicSalary + this.hra + this.da;
     }
 }
 
 public class Main1 {
     public static void main(String[] args) {
-        
+
       Scanner sc=new Scanner(System.in);  
       System.out.print("Enter number of employees : ");  
       int n=sc.nextInt();  
         
-      List<KIITEmployee> employees=new ArrayList<>(); 
+      KIITEmployee[] employees = new KIITEmployee[n]; 
 
       for(int i=0;i<n;i++) {    
           System.out.println("\nEmployee #" + (i+1));
@@ -58,10 +53,18 @@ public class Main1 {
           double basicSalary=sc.nextDouble();
           
           KIITEmployee emp = new KIITEmployee(emp_id, emp_name, emp_desig, basicSalary);
-          employees.add(emp); 
+          employees[i] = emp; 
       } 
         
-      Collections.sort(employees);  
+      for(int i=0;i<n-1;i++) {
+        for(int j=i+1;j<n;j++) {
+            if(employees[i].getGrossSalary() > employees[j].getGrossSalary()) {
+                KIITEmployee temp = employees[i];
+                employees[i] = employees[j];
+                employees[j] = temp;
+            }
+        }
+      }
 
       System.out.println("\nEmployees sorted by gross salary (ascending order):");
       for(KIITEmployee emp:employees) {    

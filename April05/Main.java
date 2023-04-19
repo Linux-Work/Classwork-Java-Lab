@@ -52,6 +52,7 @@ public class Main {
 
             students[i] = new MCAStudent(rollno, name, mark1, mark2, mark3);
         }
+        
         Arrays.sort(students, (s1, s2) -> s2.getTotalMarks() - s1.getTotalMarks());
 
         System.out.println("\nStudents Details in Descending Order of Total Marks:");
