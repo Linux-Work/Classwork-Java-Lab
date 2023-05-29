@@ -134,7 +134,7 @@ public class SortArray {
     }
 
     public static void main(String[] args) {
-        SortArray sa = new SortArray(); 
+        SortArray sa = new SortArray();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array size to be allocated: ");
         int size = sc.nextInt();

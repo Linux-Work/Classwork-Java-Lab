@@ -14,7 +14,6 @@ public class Division {
         } catch (ArithmeticException e) {
             System.out.println("Division not possible. Denominator cannot be 0.");
         }
-        
         sc.close();
     }
 }

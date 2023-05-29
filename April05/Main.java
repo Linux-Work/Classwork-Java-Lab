@@ -40,7 +40,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             System.out.print("\nEnter Roll No for student " + (i+1) + ": ");
             int rollno = sc.nextInt();
-            sc.nextLine(); // Consume newline left-over
+            sc.nextLine();
             System.out.print("Enter Name for student " + (i+1) + ": ");
             String name = sc.nextLine();
             System.out.print("Enter Mark 1 for student " + (i+1) + ": ");
@@ -52,7 +52,6 @@ public class Main {
 
             students[i] = new MCAStudent(rollno, name, mark1, mark2, mark3);
         }
-        
         Arrays.sort(students, (s1, s2) -> s2.getTotalMarks() - s1.getTotalMarks());
 
         System.out.println("\nStudents Details in Descending Order of Total Marks:");

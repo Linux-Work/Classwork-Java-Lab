@@ -53,7 +53,7 @@ public class Complex {
         c1.showComplex(); // Output: 0 + 0i
         
         // Create a complex number using the parameterized constructor
-        Complex c2 = new Complex(2, 3);
+        Complex c2 = new Complex(2, 3);  
 	System.out.println("\nFirst complex: ");
         c2.showComplex(); // Output: 2 + 3i
         

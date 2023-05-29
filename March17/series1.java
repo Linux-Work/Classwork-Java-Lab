@@ -9,6 +9,6 @@ class series1{
       		for (i = 1; i <= n; i++){
        			sum = sum + 1/i;
 		}
-        System.out.println("Sum is: " + sum);
+        	System.out.println("Sum is: " + sum);
 	}
 }

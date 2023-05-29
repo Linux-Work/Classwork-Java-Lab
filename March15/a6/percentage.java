@@ -48,11 +48,8 @@ class percentage {
                 grade = "Fail";
                 break;
         }
-        System.out.println("Name: " + name);
-        System.out.println("Roll: " + roll);
         System.out.println("Total marks: " + total);
         System.out.println("Percentage: " + percentage);
         System.out.println("Grade: " + grade);
-        sc.close();
     }
 }

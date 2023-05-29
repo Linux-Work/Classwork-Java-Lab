@@ -1,0 +1,21 @@
+Write a menu driven program in java using JDBC to Insert, Delete, Search and view all records from a student table that you have created. Note: Before implementing this code to connect to Oracle database you should create an empty table "student" in oracle having 3 columns such as: create table student (id number(3), name varchar2(30), fees number(7,2)).
+
+
+
+::::StudentDatabase::::
+
+In this program, we have created a StudentDatabase class with a main method. Inside the main method, we have established a connection to the Oracle database using JDBC.
+
+We have then implemented a while loop to display a menu and take user input for various operations like insert, delete, search and view records.
+
+For each operation, we have defined separate methods like insertRecord, deleteRecord, searchRecord and viewAllRecords.
+
+In the insertRecord method, we have taken input from the user for ID, name and fees of the student. We have then used a prepared statement to insert these values into the "student" table in the database.
+
+In the deleteRecord method, we have taken input from the user for ID of the student whose record needs to be deleted. We have then used a prepared statement to delete this record from the "student" table in the database.
+
+In the searchRecord method, we have taken input from the user for ID of the student whose record needs to be searched. We have then used a prepared statement to select this record from the "student" table in the database. If found, we print it on console otherwise print "Record not found".
+
+In the viewAllRecords method, we have used a prepared statement to select all records from the "student" table in the database. We have then printed them on console.
+
+I hope this helps you! Let me know if you have any further queries or doubts. And don't forget to check out codedamn for more coding courses!

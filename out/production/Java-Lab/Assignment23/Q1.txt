@@ -1,0 +1,31 @@
+Write a program in java to show read and write operations in a text file. Create a file Student to store a record such as roll no, and name of the student. Also write a complete program to write records into file, read all records from the file, read all records from the file, search a record from the file.
+
+
+::::Explanation::::
+
+In this program, we have created a Student class with rollNo and name fields. We have also defined a constructor and getter methods for these fields.
+
+In the main method, we have created a File object with the name "Student.txt" and used the createNewFile() method to create a new file with this name if it doesn't exist.
+
+We have then created a FileWriter object to write records to the file. We have written two records to the file - one with roll number 1 and name John, and another with roll number 2 and name Jane.
+
+After writing the records, we have closed the writer object.
+
+Next, we have created a FileReader object to read records from the file. We have used a BufferedReader object to read each line from the file and print it on the console.
+
+Finally, we have created another FileReader object and used it to search for a record with roll number 2. We have used a BufferedReader object again to read each line from the file and split it into parts using space as separator. We have then parsed the roll number from the first part of this line and checked if it is equal to 2. If yes, we have printed the corresponding name on the console using the second part of this line.
+
+I hope this helps you! Let me know if you have any further queries or doubts. And don't forget to check out codedamn for more coding courses!
+
+
+::::Student1.java::::
+
+In this modified program, we have added a new BufferedReader object to take input from the user for the roll number to search. We have used the readLine() method of this object to read the input from the console.
+
+We have then added a boolean variable foundRecord to keep track of whether the record was found or not. We have initialized it to false.
+
+Inside the loop where we are searching for the record, we have set foundRecord to true if we find the record with the given roll number.
+
+After searching for the record, we have checked if foundRecord is still false. If yes, we print "Record Not Found" on the console.
+
+I hope this helps you! Let me know if you have any further queries or doubts. And don't forget to check out codedamn for more coding courses!

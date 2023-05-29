@@ -3,7 +3,7 @@ class salary {
     public static void main(String[] args) {
         double hra = 0, da = 0;
         Scanner sc = new Scanner(System.in);
-	    System.out.println("Enter the salary: ");
+	System.out.println("Enter the salary: ");
         double salary = sc.nextDouble();
         if (salary < 12000) {
             hra = 12000 * 0.2;

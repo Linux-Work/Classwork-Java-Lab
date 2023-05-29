@@ -1,30 +1,19 @@
 import java.util.Scanner;
 
-public class multiplySingleDigit {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the value : ");
-        int n = sc.nextInt();
-        int result = 1;
-        while (n > 0) {
-            int digit = n % 10;
-            if (digit != 0) {
-                result *= digit;
-            }
-            n /= 10;
-        }
-        while (result >= 10) {
-            int temp = result;
-            result = 1;
-            while (temp > 0) {
-                int digit = temp % 10;
-                if (digit != 0) {
-                    result *= digit;
-                }
-                temp /= 10;
-            }
-        }
-        System.out.println(result);
-        sc.close();
+class multiplySingleDigit {
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+        	long n = sc.nextInt();
+		long prod = 1;
+        	while (n > 0 || prod > 9) {
+            		if (n == 0) {
+                		n = prod;
+                		prod = 1;
+            		}
+            		prod *= n % 10;
+            		n /= 10;
+        	}
+        System.out.println("Single digit is: " + prod);
     }
 }

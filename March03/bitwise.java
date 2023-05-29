@@ -11,7 +11,7 @@ class bitwise {
 		num3 = num1^num2;
 		System.out.println("Num1 & Num2: " + num3);
 
-		num3 = ~num2;
-		System.out.println("~Num2: " + num3);
+//		num3 = num1~num2;
+		System.out.println("Num1 & Num2: " + num3);
 	}
 }

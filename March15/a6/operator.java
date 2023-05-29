@@ -21,6 +21,5 @@ public class operator {
             default:
                 System.out.println("Invalid input!");
         }
-        sc.close();
     }
 }

@@ -18,12 +18,7 @@ class quadratic {
         int D = b * b - 4 * a * c;
 
         if (D > 0) {
-            if (Math.sqrt(D)%1==0) {
-                System.out.print("Rational and Squared");
-            }
-            else{
-                System.out.println("Rational but not Squared");
-            }
+            System.out.print("Rational and Squared or Rational and Not Squared.");
         }
 
         else if (D == 0) {

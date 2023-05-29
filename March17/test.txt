@@ -1,0 +1,33 @@
+public static long repeatedProduct(long n)
+    {
+        long prod = 1;
+        while (n > 0 || prod > 9) {
+            if (n == 0) {
+                n = prod;
+                prod = 1;
+            }
+            prod *= n % 10;
+            n /= 10;
+        }
+        return prod;
+    }
+ 
+    // Function to find the maximum among
+    // repeated sum and repeated product
+    public static long maxSumProduct(long N)
+    {
+ 
+        if (N < 10)
+            return N;
+ 
+        return Math.max(repeatedSum(N), repeatedProduct(N));
+    }
+ 
+    // Driver code
+    public static void main(String[] args)
+    {
+ 
+        long n = 631;
+        System.out.println(maxSumProduct(n));
+    }
+}
